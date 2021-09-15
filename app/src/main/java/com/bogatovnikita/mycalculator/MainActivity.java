@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView entryFieldTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
