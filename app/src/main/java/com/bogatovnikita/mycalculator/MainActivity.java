@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String stringInputTextView = "";
-    String symbolOperation = "";
+    String stringInputTextView;
+    String symbolOperation;
     float valueFirst;
     float valueSecond;
 
