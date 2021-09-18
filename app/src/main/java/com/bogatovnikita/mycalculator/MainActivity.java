@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     String stringInputTextView = "";
+    String symbol = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stringInputTextView = stringInputTextView.concat("7");
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("7");
                 inputTextView.setText(stringInputTextView);
             }
         });
@@ -61,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
         eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("8");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -69,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
         nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("9");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -85,7 +91,9 @@ public class MainActivity extends AppCompatActivity {
         four.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("4");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -93,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
         five.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("5");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -101,7 +111,9 @@ public class MainActivity extends AppCompatActivity {
         six.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("6");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -117,7 +129,9 @@ public class MainActivity extends AppCompatActivity {
         three.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("3");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -125,7 +139,9 @@ public class MainActivity extends AppCompatActivity {
         two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("2");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -133,7 +149,9 @@ public class MainActivity extends AppCompatActivity {
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("1");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -149,7 +167,9 @@ public class MainActivity extends AppCompatActivity {
         nullB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if (stringInputTextView.length() <= 7)
+                    stringInputTextView = stringInputTextView.concat("0");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
