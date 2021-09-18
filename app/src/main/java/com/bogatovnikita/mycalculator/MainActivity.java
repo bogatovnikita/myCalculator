@@ -10,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     String stringInputTextView = "";
     String symbolOperation = "";
+    float valueFirst;
+    float valueSecond;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button divide = findViewById(R.id.divide_button);
         divide.setOnClickListener(view -> {
-
+            if (symbolOperation.isEmpty()) {
+                symbolOperation = "/";
+                valueFirst = Float.parseFloat(stringInputTextView);
+                clear();
+            }
         });
 
         Button seven = findViewById(R.id.seven_button);
