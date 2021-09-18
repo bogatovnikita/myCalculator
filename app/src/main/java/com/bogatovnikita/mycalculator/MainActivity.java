@@ -3,14 +3,13 @@ package com.bogatovnikita.mycalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     String stringInputTextView = "";
-    String symbol = "";
+    String symbolOperation = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,167 +25,113 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button openParenthesis = findViewById(R.id.open_parenthesis_button);
-        openParenthesis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        openParenthesis.setOnClickListener(view -> {
 
-            }
         });
 
         Button closeParenthesis = findViewById(R.id.close_parenthesis_button);
-        closeParenthesis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        closeParenthesis.setOnClickListener(view -> {
 
-            }
         });
 
         Button divide = findViewById(R.id.divide_button);
-        divide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        divide.setOnClickListener(view -> {
 
-            }
         });
 
         Button seven = findViewById(R.id.seven_button);
-        seven.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("7");
-                inputTextView.setText(stringInputTextView);
-            }
+        seven.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("7");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button eight = findViewById(R.id.eight_button);
-        eight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("8");
-                inputTextView.setText(stringInputTextView);
-            }
+        eight.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("8");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button nine = findViewById(R.id.nine_button);
-        nine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("9");
-                inputTextView.setText(stringInputTextView);
-            }
+        nine.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("9");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button multiply = findViewById(R.id.multiply_button);
-        multiply.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        multiply.setOnClickListener(view -> {
 
-            }
         });
 
         Button four = findViewById(R.id.four_button);
-        four.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("4");
-                inputTextView.setText(stringInputTextView);
-            }
+        four.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("4");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button five = findViewById(R.id.five_button);
-        five.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("5");
-                inputTextView.setText(stringInputTextView);
-            }
+        five.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("5");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button six = findViewById(R.id.six_button);
-        six.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("6");
-                inputTextView.setText(stringInputTextView);
-            }
+        six.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("6");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button subtract = findViewById(R.id.subtract_button);
-        subtract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        subtract.setOnClickListener(view -> {
 
-            }
         });
 
         Button three = findViewById(R.id.three_button);
-        three.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("3");
-                inputTextView.setText(stringInputTextView);
-            }
+        three.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("3");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button two = findViewById(R.id.two_button);
-        two.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("2");
-                inputTextView.setText(stringInputTextView);
-            }
+        two.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("2");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button one = findViewById(R.id.one_button);
-        one.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("1");
-                inputTextView.setText(stringInputTextView);
-            }
+        one.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("1");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button fold = findViewById(R.id.fold_button);
-        fold.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        fold.setOnClickListener(view -> {
 
-            }
         });
 
         Button nullB = findViewById(R.id.null_button);
-        nullB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (stringInputTextView.length() <= 7)
-                    stringInputTextView = stringInputTextView.concat("0");
-                inputTextView.setText(stringInputTextView);
-            }
+        nullB.setOnClickListener(view -> {
+            if (stringInputTextView.length() <= 7)
+                stringInputTextView = stringInputTextView.concat("0");
+            inputTextView.setText(stringInputTextView);
         });
 
         Button comma = findViewById(R.id.comma_button);
-        comma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        comma.setOnClickListener(view -> {
 
-            }
         });
 
         Button equals = findViewById(R.id.equals_button);
-        equals.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        equals.setOnClickListener(view -> {
 
-            }
         });
     }
 
