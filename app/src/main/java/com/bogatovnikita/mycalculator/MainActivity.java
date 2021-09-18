@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    String stringInputTextView = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button deleteAllValue = findViewById(R.id.delete_all_button);
         deleteAllValue.setOnClickListener(view -> {
-            inputTextView.setText("");
+            clear();
+            inputTextView.setText(stringInputTextView);
         });
 
         Button openParenthesis = findViewById(R.id.open_parenthesis_button);
@@ -49,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
         seven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                inputTextView.setText("7");
+                stringInputTextView = stringInputTextView.concat("7");
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -164,5 +168,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void clear() {
+        stringInputTextView = "";
     }
 }
