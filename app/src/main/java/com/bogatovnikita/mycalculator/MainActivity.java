@@ -8,10 +8,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String stringInputTextView;
-    String symbolOperation;
+    String stringInputTextView = "";
+    String symbolOperation = "";
     float valueFirst;
     float valueSecond;
+    float temp = 0.0f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 symbolOperation = "/";
                 valueFirst = Float.parseFloat(stringInputTextView);
                 clear();
+                inputTextView.setText(stringInputTextView);
             }
         });
 
@@ -50,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("7");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("7");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button eight = findViewById(R.id.eight_button);
@@ -57,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("8");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("8");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button nine = findViewById(R.id.nine_button);
@@ -64,11 +74,20 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("9");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("9");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button multiply = findViewById(R.id.multiply_button);
         multiply.setOnClickListener(view -> {
-
+            if (symbolOperation.isEmpty()) {
+                symbolOperation = "*";
+                valueFirst = Float.parseFloat(stringInputTextView);
+                clear();
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button four = findViewById(R.id.four_button);
@@ -76,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("4");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("4");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button five = findViewById(R.id.five_button);
@@ -83,6 +106,10 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("5");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("5");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button six = findViewById(R.id.six_button);
@@ -90,11 +117,20 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("6");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("6");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button subtract = findViewById(R.id.subtract_button);
         subtract.setOnClickListener(view -> {
-
+            if (symbolOperation.isEmpty()) {
+                symbolOperation = "-";
+                valueFirst = Float.parseFloat(stringInputTextView);
+                clear();
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button three = findViewById(R.id.three_button);
@@ -102,6 +138,10 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("3");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("3");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button two = findViewById(R.id.two_button);
@@ -109,6 +149,10 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("2");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("2");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button one = findViewById(R.id.one_button);
@@ -116,11 +160,20 @@ public class MainActivity extends AppCompatActivity {
             if (stringInputTextView.length() <= 7)
                 stringInputTextView = stringInputTextView.concat("1");
             inputTextView.setText(stringInputTextView);
+            if (!symbolOperation.isEmpty() && stringInputTextView.isEmpty()) {
+                stringInputTextView = stringInputTextView.concat("1");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button fold = findViewById(R.id.fold_button);
         fold.setOnClickListener(view -> {
-
+            if (symbolOperation.isEmpty()) {
+                symbolOperation = "+";
+                valueFirst = Float.parseFloat(stringInputTextView);
+                clear();
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button nullB = findViewById(R.id.null_button);
@@ -137,11 +190,28 @@ public class MainActivity extends AppCompatActivity {
 
         Button equals = findViewById(R.id.equals_button);
         equals.setOnClickListener(view -> {
-
+            equalsCount();
+            inputTextView.setText(Float.toString(temp));
         });
     }
 
     public void clear() {
         stringInputTextView = "";
+    }
+
+    public void equalsCount() {
+        valueSecond = Float.parseFloat(stringInputTextView);
+        if (symbolOperation.equals("/")) {
+            temp = valueFirst / valueSecond;
+        }
+        if (symbolOperation.equals("*")) {
+            temp = valueFirst * valueSecond;
+        }
+        if (symbolOperation.equals("-")) {
+            temp = valueFirst - valueSecond;
+        }
+        if (symbolOperation.equals("+")) {
+            temp = valueFirst + valueSecond;
+        }
     }
 }
