@@ -10,9 +10,9 @@ public class MainActivity extends AppCompatActivity {
 
     String stringInputTextView = "";
     String symbolOperation = "";
-    float valueFirst;
-    float valueSecond;
-    float temp;
+    double valueFirst;
+    double valueSecond;
+    double temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         divide.setOnClickListener(view -> {
             if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "/";
-                valueFirst = Float.parseFloat(stringInputTextView);
+                valueFirst = Double.parseDouble(stringInputTextView);
                 clear();
                 inputTextView.setText(stringInputTextView);
             }
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         multiply.setOnClickListener(view -> {
             if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "*";
-                valueFirst = Float.parseFloat(stringInputTextView);
+                valueFirst = Double.parseDouble(stringInputTextView);
                 clear();
                 inputTextView.setText(stringInputTextView);
             }
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         subtract.setOnClickListener(view -> {
             if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "-";
-                valueFirst = Float.parseFloat(stringInputTextView);
+                valueFirst = Double.parseDouble(stringInputTextView);
                 clear();
                 inputTextView.setText(stringInputTextView);
             }
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         fold.setOnClickListener(view -> {
             if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "+";
-                valueFirst = Float.parseFloat(stringInputTextView);
+                valueFirst = Double.parseDouble(stringInputTextView);
                 clear();
                 inputTextView.setText(stringInputTextView);
             }
@@ -195,8 +195,9 @@ public class MainActivity extends AppCompatActivity {
         Button equals = findViewById(R.id.equals_button);
         equals.setOnClickListener(view -> {
             equalsCount();
-            inputTextView.setText(Float.toString(temp));
+            inputTextView.setText(Double.toString(temp));
             clearAll();
+
         });
     }
 
@@ -207,13 +208,13 @@ public class MainActivity extends AppCompatActivity {
     public void clearAll() {
         stringInputTextView = "";
         symbolOperation = "";
-        float valueFirst = 0.0f;
-        float valueSecond = 0.0f;
-        float temp = 0.0f;
+        double valueFirst = 0.0f;
+        double valueSecond = 0.0f;
+        double temp = 0.0f;
     }
 
     public void equalsCount() {
-        valueSecond = Float.parseFloat(stringInputTextView);
+        valueSecond = Double.parseDouble(stringInputTextView);
         if (symbolOperation.equals("/")) {
             temp = valueFirst / valueSecond;
         }
