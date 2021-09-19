@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     String symbolOperation = "";
     float valueFirst;
     float valueSecond;
-    float temp = 0.0f;
+    float temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button deleteAllValue = findViewById(R.id.delete_all_button);
         deleteAllValue.setOnClickListener(view -> {
-            clear();
-            inputTextView.setText(stringInputTextView);
+            clearAll();
+            inputTextView.setText("");
+
         });
 
         Button openParenthesis = findViewById(R.id.open_parenthesis_button);
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button divide = findViewById(R.id.divide_button);
         divide.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty()) {
+            if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "/";
                 valueFirst = Float.parseFloat(stringInputTextView);
                 clear();
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button multiply = findViewById(R.id.multiply_button);
         multiply.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty()) {
+            if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "*";
                 valueFirst = Float.parseFloat(stringInputTextView);
                 clear();
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button subtract = findViewById(R.id.subtract_button);
         subtract.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty()) {
+            if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "-";
                 valueFirst = Float.parseFloat(stringInputTextView);
                 clear();
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button fold = findViewById(R.id.fold_button);
         fold.setOnClickListener(view -> {
-            if (symbolOperation.isEmpty()) {
+            if (symbolOperation.isEmpty() && !stringInputTextView.isEmpty()) {
                 symbolOperation = "+";
                 valueFirst = Float.parseFloat(stringInputTextView);
                 clear();
@@ -185,18 +186,30 @@ public class MainActivity extends AppCompatActivity {
 
         Button comma = findViewById(R.id.comma_button);
         comma.setOnClickListener(view -> {
-
+            if (!stringInputTextView.isEmpty() && stringInputTextView.length() <= 7) {
+                stringInputTextView = stringInputTextView.concat(".");
+                inputTextView.setText(stringInputTextView);
+            }
         });
 
         Button equals = findViewById(R.id.equals_button);
         equals.setOnClickListener(view -> {
             equalsCount();
             inputTextView.setText(Float.toString(temp));
+            clearAll();
         });
     }
 
     public void clear() {
         stringInputTextView = "";
+    }
+
+    public void clearAll() {
+        stringInputTextView = "";
+        symbolOperation = "";
+        float valueFirst = 0.0f;
+        float valueSecond = 0.0f;
+        float temp = 0.0f;
     }
 
     public void equalsCount() {
