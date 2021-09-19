@@ -1,5 +1,6 @@
 package com.bogatovnikita.mycalculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -7,7 +8,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
     String stringInputTextView = "";
     String symbolOperation = "";
     double valueFirst;
@@ -18,24 +18,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         TextView inputTextView = findViewById(R.id.input_field_text_view);
+
+        if (savedInstanceState != null && savedInstanceState.containsKey("stringInputTextView_key")
+                && savedInstanceState.containsKey("symbolOperation_key") && savedInstanceState.containsKey("valueFirst_key")
+                && savedInstanceState.containsKey("valueSecond_key") && savedInstanceState.containsKey("temp_key")) {
+            stringInputTextView = savedInstanceState.getString("stringInputTextView_key");
+            symbolOperation = savedInstanceState.getString("symbolOperation_key");
+            valueFirst = savedInstanceState.getDouble("valueFirst_key");
+            valueSecond = savedInstanceState.getDouble("valueSecond_key");
+            temp = savedInstanceState.getDouble("temp_key");
+        }
+        inputTextView.getText();
 
         Button deleteAllValue = findViewById(R.id.delete_all_button);
         deleteAllValue.setOnClickListener(view -> {
             clearAll();
             inputTextView.setText("");
-
         });
 
         Button openParenthesis = findViewById(R.id.open_parenthesis_button);
         openParenthesis.setOnClickListener(view -> {
-
+            //stub!
         });
 
         Button closeParenthesis = findViewById(R.id.close_parenthesis_button);
         closeParenthesis.setOnClickListener(view -> {
-
+            //Stub!
         });
 
         Button divide = findViewById(R.id.divide_button);
@@ -227,5 +236,15 @@ public class MainActivity extends AppCompatActivity {
         if (symbolOperation.equals("+")) {
             temp = valueFirst + valueSecond;
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("stringInputTextView_key", stringInputTextView);
+        outState.putString("symbolOperation_key", symbolOperation);
+        outState.putDouble("valueFirst_key", valueFirst);
+        outState.putDouble("valueSecond_key", valueSecond);
+        outState.putDouble("temp_key", temp);
     }
 }
