@@ -156,4 +156,5 @@ public class MainActivity extends AppCompatActivity {
         outState.putDouble("valueSecond_key", buttons.valueSecond);
         outState.putDouble("temp_key", buttons.temp);
     }
+
 }
