@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_background"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -14,7 +14,7 @@
         android:layout_margin="@dimen/margin_TextView_20dp"
         android:layout_weight="@dimen/weight_button_05"
         android:gravity="right"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_size_80sp"
         android:textStyle="normal" />
 
@@ -26,44 +26,35 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_all_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/button_clear"
-            android:textSize="@dimen/text_size"
-            tools:ignore="NestedWeights" />
+            android:text="@string/button_clear" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/open_parenthesis_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/open_parenthesis_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/open_parenthesis_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/close_parenthesis_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/close_parenthesis_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/close_parenthesis_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/divide_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/divide_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/divide_button" />
 
     </LinearLayout>
 
@@ -77,42 +68,33 @@
             android:id="@+id/seven_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
+            style="@style/MyThemeCalculator"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/seven_button"
-            android:textSize="@dimen/text_size"
-            tools:ignore="NestedWeights" />
+            android:text="@string/seven_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/eight_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/eight_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/eight_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nine_button"
             android:layout_width="match_parent"
+            style="@style/MyThemeCalculator"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/nine_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/nine_button"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/multiply_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/multiply_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/multiply_button" />
 
     </LinearLayout>
 
@@ -125,43 +107,34 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/four_button"
             android:layout_width="match_parent"
+            style="@style/MyThemeCalculator"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/four_button"
-            android:textSize="@dimen/text_size"
-            tools:ignore="NestedWeights" />
+            android:text="@string/four_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/five_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/five_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/five_button"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/six_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/six_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/six_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/subtract_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/subtract_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/subtract_button" />
 
     </LinearLayout>
 
@@ -173,44 +146,35 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/three_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/three_button"
-            android:textSize="@dimen/text_size"
-            tools:ignore="NestedWeights" />
+            android:text="@string/three_button"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/two_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/two_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/two_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/one_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/one_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/one_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/fold_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button"
-            android:gravity="center_horizontal"
-            android:text="@string/fold_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/fold_button" />
 
     </LinearLayout>
 
@@ -222,34 +186,27 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/null_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button_02"
-            android:gravity="center_horizontal"
-            android:text="@string/null_button"
-            android:textSize="@dimen/text_size"
-            tools:ignore="NestedWeights" />
+            android:text="@string/null_button"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/comma_button"
             android:layout_width="match_parent"
+            style="@style/MyThemeCalculator"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button_03"
-            android:gravity="center_horizontal"
-            android:text="@string/comma_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/comma_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/equals_button"
+            style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_button"
             android:layout_weight="@dimen/weight_button_03"
-            android:gravity="center_horizontal"
-            android:text="@string/equals_button"
-            android:textSize="@dimen/text_size" />
+            android:text="@string/equals_button" />
     </LinearLayout>
 
 </LinearLayout>
