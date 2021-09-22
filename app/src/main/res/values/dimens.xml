@@ -3,6 +3,7 @@
     <dimen name="text_size_80sp">80sp</dimen>
     <dimen name="text_size_50sp">50sp</dimen>
     <dimen name="text_size_40sp">40sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
     <dimen name="margin_button_2dp">2dp</dimen>
     <dimen name="margin_TextView_20dp">20dp</dimen>
     <dimen name="weight_button_04">4</dimen>
