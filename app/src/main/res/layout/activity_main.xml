@@ -25,35 +25,28 @@
         android:layout_weight="@dimen/weight_button_06">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/choice_theme"
+            style="@style/MyThemeCalculatorChoiceTheme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="@dimen/weight_button_02"
+            android:text="@string/choice_themes" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/delete_all_button"
             style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="@dimen/weight_button"
+            android:layout_weight="@dimen/weight_button_03"
             android:text="@string/button_clear" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/open_parenthesis_button"
-            style="@style/MyThemeCalculator"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="@dimen/weight_button"
-            android:text="@string/open_parenthesis_button" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/close_parenthesis_button"
-            style="@style/MyThemeCalculator"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="@dimen/weight_button"
-            android:text="@string/close_parenthesis_button" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/divide_button"
             style="@style/MyThemeCalculator"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="@dimen/weight_button"
+            android:layout_weight="@dimen/weight_button_03"
             android:text="@string/divide_button" />
 
     </LinearLayout>

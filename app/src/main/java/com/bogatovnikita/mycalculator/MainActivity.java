@@ -2,12 +2,14 @@ package com.bogatovnikita.mycalculator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Buttons buttons = new Buttons();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -156,5 +158,4 @@ public class MainActivity extends AppCompatActivity {
         outState.putDouble("valueSecond_key", buttons.valueSecond);
         outState.putDouble("temp_key", buttons.temp);
     }
-
 }
