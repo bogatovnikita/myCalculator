@@ -25,7 +25,7 @@
         android:layout_weight="@dimen/weight_button_06">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/close_parenthesis_button"
+            android:id="@+id/choice_theme"
             style="@style/MyThemeCalculatorLand"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -20,4 +20,6 @@
     <string name="comma_button">.</string>
     <string name="equals_button">=</string>
     <string name="choice_themes">Выбор темы</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="white_theme">Светлая тема</string>
 </resources>
