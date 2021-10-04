@@ -2,6 +2,8 @@ package com.bogatovnikita.mycalculator;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,20 +27,16 @@ public class MainActivity extends AppCompatActivity {
             buttons.temp = savedInstanceState.getDouble("temp_key");
         }
 
+        Button choiceTheme = findViewById(R.id.choice_theme);
+        choiceTheme.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, ChoiceTheme.class);
+            startActivity(intent);
+        });
+
         Button deleteAllValue = findViewById(R.id.delete_all_button);
         deleteAllValue.setOnClickListener(view -> {
             buttons.clearAllCount();
             inputTextView.setText("");
-        });
-
-        Button openParenthesis = findViewById(R.id.open_parenthesis_button);
-        openParenthesis.setOnClickListener(view -> {
-            //stub!
-        });
-
-        Button closeParenthesis = findViewById(R.id.close_parenthesis_button);
-        closeParenthesis.setOnClickListener(view -> {
-            //Stub!
         });
 
         Button divide = findViewById(R.id.divide_button);
@@ -156,5 +154,4 @@ public class MainActivity extends AppCompatActivity {
         outState.putDouble("valueSecond_key", buttons.valueSecond);
         outState.putDouble("temp_key", buttons.temp);
     }
-
 }
